@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const serverless = require('serverless-http');
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -90,3 +91,6 @@ app.get('/news/:newspaperName', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Express server is listening on port ${PORT}.`)
 });
+
+app.use('/.netlify/functions/api');
+module.exports.handler = serverless(app);
