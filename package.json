@@ -1,6 +1,5 @@
 {
   "name": "climate-api",
-  "type": "module",
   "version": "1.0.0",
   "description": "Api tutorial - Climate API",
   "main": "index.js",
