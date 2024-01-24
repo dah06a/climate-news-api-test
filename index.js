@@ -92,5 +92,4 @@ app.listen(PORT, () => {
   console.log(`Express server is listening on port ${PORT}.`)
 });
 
-app.use('/.netlify/functions/api');
-module.exports.handler = serverless(app);
+module.exports = app;
